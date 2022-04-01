@@ -146,7 +146,7 @@ yarn_2_install() {
   echo "Running 'yarn install' with yarn.lock"
   cd "$build_dir" || return
 
-  monitor "yarn-2-install" yarn install --immutable 2>&1
+  monitor "yarn-2-install" yarn run install-backend 2>&1
 }
 
 yarn_prune_devdependencies() {
