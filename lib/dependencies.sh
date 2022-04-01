@@ -145,8 +145,8 @@ yarn_2_install() {
 
   echo "Running 'yarn install' with yarn.lock"
   cd "$build_dir" || return
-
-  monitor "yarn-2-install" yarn run install-backend 2>&1
+  ls .
+  monitor "yarn-2-install" yarn workspaces focus backend 2>&1
 }
 
 yarn_prune_devdependencies() {
